@@ -12,9 +12,13 @@ app = Flask(__name__)
 
 def _event_handler(event_type, slack_event):
     if event_type == "pin_added":
-        # Update the onboarding message
         pyBot.update_pin(slack_event)
-        return make_response("Welcome message updates with pin", 200,)
+        return make_response("Welcome message updates with pin", 200,
+                             {"content_type": "application/json"})
+    elif event_type == "pin_removed":
+        pyBot.update_pin(slack_event)
+        return make_response("Remove message ", 200, {"content_type":
+                              "application/json"})
 
     message = "You have not added an event handler for the %s" % event_type
     return make_response(message, 200, {"X-Slack-No-Retry": 1})
