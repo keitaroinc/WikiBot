@@ -39,3 +39,5 @@ class TotoBoto(object):
 
     def update_pin(self, slack_event):
         print slack_event
+
+
