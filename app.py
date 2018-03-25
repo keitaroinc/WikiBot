@@ -3,6 +3,7 @@ import os.path
 import json
 import totoboto
 from flask import Flask, request, make_response, render_template
+from BeautifulSoup import BeautifulSoup
 
 pyBot = totoboto.TotoBoto()
 slack = pyBot.client
