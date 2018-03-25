@@ -1,7 +1,6 @@
 # encoding: utf-8
 
 import os
-import message
 
 from slackclient import SlackClient
 
@@ -39,5 +38,7 @@ class TotoBoto(object):
 
     def update_pin(self, slack_event):
         print slack_event
-
-
+        message = slack_event["event"]["item"]["message"]["text"]
+        opened_file = open("messages.txt", 'a')
+        opened_file.write(message + "\n")
+        opened_file.close()
