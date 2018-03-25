@@ -47,5 +47,11 @@ def hears():
                          you're looking for.", 404, {"X-Slack-No-Retry": 1})
 
 
+@app.route("/pinned", methods=["GET"])
+def pinned():
+    with open("messages.txt", "r") as f:
+        text = f.read()
+    return render_template("pinned.html", text=text)
+
 if __name__ == '__main__':
     app.run(debug=True)
