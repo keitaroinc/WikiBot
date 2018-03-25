@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+import os.path
 import json
 import totoboto
 from flask import Flask, request, make_response, render_template
@@ -49,8 +49,14 @@ def hears():
 
 @app.route("/pinned", methods=["GET"])
 def pinned():
-    with open("messages.txt", "r") as f:
-        text = f.read()
+    file_path = "messages.txt"
+    text = ''
+    if os.path.isfile(file_path):
+        with open(file_path, "r") as f:
+            text = f.read()
+    else:
+        text = "There are no pinned posts"
+
     return render_template("pinned.html", text=text)
 
 if __name__ == '__main__':
