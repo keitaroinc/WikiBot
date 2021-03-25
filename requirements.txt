@@ -5,7 +5,7 @@ itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
 pyaml==16.9.0
-PyYAML==3.12
+PyYAML==5.4
 requests==2.11.1
 six==1.10.0
 websocket-client==0.37.0
