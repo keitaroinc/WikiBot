@@ -1,3 +1,11 @@
+"""
+Copyright (c) 2018 Keitaro AB
+
+Use of this source code is governed by an MIT license
+that can be found in the LICENSE file or at
+https://opensource.org/licenses/MIT.
+"""
+
 # encoding: utf-8
 
 import os
@@ -42,3 +50,4 @@ class TotoBoto(object):
         opened_file = open("messages.txt", 'a')
         opened_file.write(message + "\n")
         opened_file.close()
+
