@@ -1,3 +1,11 @@
+"""
+Copyright (c) 2018 Keitaro AB
+
+Use of this source code is governed by an MIT license
+that can be found in the LICENSE file or at
+https://opensource.org/licenses/MIT.
+"""
+
 # encoding: utf-8
 
 import yaml
@@ -21,3 +29,4 @@ class Message(object):
             json_attachments = json_dict["attachments"]
             [self.attachments[i].update(json_attachments[i]) for i
              in range(len(json_attachments))]
+

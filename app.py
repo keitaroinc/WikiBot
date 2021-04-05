@@ -1,3 +1,11 @@
+"""
+Copyright (c) 2018 Keitaro AB
+
+Use of this source code is governed by an MIT license
+that can be found in the LICENSE file or at
+https://opensource.org/licenses/MIT.
+"""
+
 # encoding: utf-8
 import os.path
 import json
@@ -62,3 +70,4 @@ def pinned():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
